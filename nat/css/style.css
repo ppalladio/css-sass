@@ -49,6 +49,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 .heading-primary {
     color: #fff;
@@ -104,4 +105,32 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 80px;
+    transition: all 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    /*@ with less blur value and Y offset it will look closer to user */
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
