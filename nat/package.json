@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "node": "^19.6.0",
+    "node-sass": "^8.0.0",
+    "sass": "^1.58.3"
+  },
+  "name": "natour",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}
