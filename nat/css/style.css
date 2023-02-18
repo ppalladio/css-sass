@@ -6,18 +6,22 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px; }
+  padding: 3rem; }
 
 .header {
   height: 95vh;
@@ -38,28 +42,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-  .header .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    /* !eliminate the shakiness */
-    backface-visibility: hidden; }
-    .header .heading-primary .heading-primary-main {
-      display: inline-block;
-      font-size: 67px;
-      font-weight: 400;
-      letter-spacing: 40px;
-      animation-name: moveInLeft;
-      animation-duration: 1s;
-      /* 
-			animation-iteration-count: 3;
-			animation-delay: 3s; */ }
-    .header .heading-primary .heading-primary-sub {
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 17.5px;
-      animation-name: moveInRight;
-      animation-duration: 1s; }
   .header .btn:link, .header .btn:visited {
     text-decoration: none;
     text-transform: uppercase;
@@ -98,6 +80,29 @@ body {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
     /*@ use fill mode the animation will not start until other animation started because of the 0.75s delay */ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* !eliminate the shakiness */
+  backface-visibility: hidden; }
+  .heading-primary-main {
+    display: inline-block;
+    font-size: 67px;
+    font-weight: 400;
+    letter-spacing: 40px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* 
+		animation-iteration-count: 3;
+		animation-delay: 3s; */ }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+    animation-name: moveInRight;
+    animation-duration: 1s; }
 
 @keyframes moveInLeft {
   0% {
