@@ -1,0 +1,41 @@
+.card {
+    //@perspective the smaller the number the dramatic the effect,
+    perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        color: white;
+        height: 50rem;
+        transition: all 0.5s ease;
+        position: absolute;
+        //:when the take the cards out of the nature flow, the parent element collapsed lost its height, so we need to add the height to parent
+        top: 0;
+        left: 0;
+        width: 100%;
+        //: to hide what is in the back
+        backface-visibility: hidden;
+		border-radius: 2px;
+		box-sizing: 0 1.5rem 4rem rbga($color-black,0.15);
+
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            &-1 {
+                background-image: linear-gradient(
+                    to bottom right,
+                    $color-secondary-light,
+                    $color-secondary-dark
+                );
+            }
+            transform: rotateY(180deg);
+        }
+    }
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
