@@ -5,7 +5,6 @@
     height: 52rem;
 
     &__side {
-        color: white;
         height: 52rem;
         transition: all 0.5s ease;
         position: absolute;
@@ -90,6 +89,8 @@
         }
     }
     &__details {
+        padding: 3rem;
+
         ul {
             list-style: none;
             width: 80%;
@@ -103,5 +104,29 @@
                 }
             }
         }
+    }
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+		width: 80%;
+		text-align: center;
+	}
+    &__price-box{
+		text-align: center;
+		margin-bottom: 8rem; 
+		color:$color-white;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform:uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
