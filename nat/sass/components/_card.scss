@@ -2,17 +2,17 @@
     //@perspective the smaller the number the dramatic the effect,
     perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
     &__side {
         color: white;
-        height: 50rem;
+        height: 52rem;
         transition: all 0.5s ease;
         position: absolute;
         //:when the take the cards out of the nature flow, the parent element collapsed lost its height, so we need to add the height to parent
         top: 0;
         left: 0;
-		overflow: hidden;
+        overflow: hidden;
         width: 100%;
         //: to hide what is in the back
         backface-visibility: hidden;
@@ -43,18 +43,18 @@
     &__picture {
         background-size: cover;
         height: 20rem;
-		clip-path: polygon(0 0 , 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-		//:blending mode
-		background-blend-mode: screen;
-		
+        //:blending mode
+        background-blend-mode: screen;
+
         &--1 {
-            background-image:  linear-gradient(
-				to bottom right,
-				$color-secondary-light,
-				$color-secondary-dark
-			),url(../img/nat-5.jpg);
-			
+            background-image: linear-gradient(
+                    to bottom right,
+                    $color-secondary-light,
+                    $color-secondary-dark
+                ),
+                url(../img/nat-5.jpg);
         }
         &--2 {
             background-image: url(../img/nat-6.jpg);
@@ -64,28 +64,44 @@
         }
     }
 
-	&__heading{
-		font-size: 2.8rem;
-		font-weight: 300;
-		text-transform: uppercase;
-		position: absolute;
-		top: 12rem;
-		right: 2rem;
-		color: $color-white;
-		width: 75%;
-		text-align: right;
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        color: $color-white;
+        width: 75%;
+        text-align: right;
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        //:box-decoration-break
+        //>The box-decoration-break CSS property specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages.
+        -webkit-box-decoration-break: clone;
 
-
-	}
-	&__heading-span{
-		padding: 1rem 1.5rem;
-		//:box-decoration-break
-		//>The box-decoration-break CSS property specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages.
-		-webkit-box-decoration-break:clone;
-
-		&--1{
-			background-image: linear-gradient(to right bottom,rgba($color-secondary-light,0.85),
-			rgba($color-secondary-dark,0.85));
-		}
-	}
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-light, 0.85),
+                rgba($color-secondary-dark, 0.85)
+            );
+        }
+    }
+    &__details {
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
 }
