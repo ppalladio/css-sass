@@ -455,3 +455,6 @@ body {
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }

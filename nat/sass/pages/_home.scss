@@ -47,4 +47,8 @@ background-image: linear-gradient(to right bottom, $color-primary-light,$color-p
 	box-shadow: 0 1rem 4rem rgba($color-black,0.2);
 	border-radius: 3px;
 height: 50rem;
+&__form{
+width: 50%;
+padding: 6rem;
+}
 }
