@@ -350,9 +350,9 @@ body {
   font-variant-east-asian: 1.2rem;
   font-weight: 700;
   margin-left: 2rem;
-  margin-top: .7rem;
+  margin-top: 0.7rem;
   display: block;
-  transform: all .3s; }
+  transform: all 0.3s; }
 
 .form__input:placeholder-shown + .form__lable {
   opacity: 0;
