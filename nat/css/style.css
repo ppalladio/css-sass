@@ -645,7 +645,8 @@ body {
   z-index: 3;
   opacity: 0;
   width: 0;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__list {
   position: absolute;
@@ -701,9 +702,9 @@ body {
     left: 0;
     transition: all 0.2s; }
   .navigation__icon::before {
-    top: -.8rem; }
+    top: -0.8rem; }
   .navigation__icon::after {
-    top: .8rem; }
+    top: 0.8rem; }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
